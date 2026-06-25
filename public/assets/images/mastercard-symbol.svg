@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="24" viewBox="0 0 40 24" fill="none" role="img" aria-label="Mastercard">
+  <circle cx="15" cy="12" r="12" fill="#EB001B" />
+  <circle cx="25" cy="12" r="12" fill="#F79E1B" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M20 21.539A11.968 11.968 0 0 0 24.5 12 11.968 11.968 0 0 0 20 2.461 11.968 11.968 0 0 0 15.5 12 11.968 11.968 0 0 0 20 21.539Z" fill="#FF5F00" />
+</svg>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — MADE</title>
+    <meta
+      name="description"
+      content="How Mastercard scales quality experiences — MADE is Mastercard's control layer for product development."
+    />
+  </head>
+  <body>
+    <made-theme-provider theme="mastercard" color-mode="light">
+      <!-- ============ TOP NAVIGATION ============ -->
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="/" aria-label="MADE home">
+            <img
+              class="brand__logo"
+              src="/assets/images/mastercard.svg"
+              alt="Mastercard"
+              width="40"
+              height="24"
+            />
+            <span class="brand__tagline">mastercard adaptive design ecosystem</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Primary">
+            <ul class="site-nav__list">
+              <li><a class="site-nav__link is-active" href="/about.html" aria-current="page">About</a></li>
+              <li><a class="site-nav__link" href="/#design-systems">Design systems</a></li>
+              <li><a class="site-nav__link" href="/#made-ai">MADE AI</a></li>
+              <li>
+                <button
+                  type="button"
+                  class="site-nav__link site-nav__link--has-icon"
+                  id="tools-menu-trigger"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="tools-dropdown"
+                >
+                   Resources
+                  <made-icon
+                    class="site-nav__chevron"
+                    name="chevrons/outline/12px/chevron-down-outline-12px"
+                  ></made-icon>
+                </button>
+              </li>
+            </ul>
+            <div class="site-nav__controls">
+              <made-icon-button
+                id="theme-toggle"
+                toggle
+                variant="ghost"
+                icon-name="toggle/outline/sun-outline"
+                icon-name-selected="controls/outline/moon-outline"
+                aria-label="Switch to dark mode"
+                aria-label-selected="Switch to light mode"
+              ></made-icon-button>
+            </div>
+          </nav>
+        </div>
+
+        <!-- ============ TOOLS & RESOURCES DROPDOWN ============ -->
+        <div class="nav-dropdown" id="tools-dropdown" role="region" aria-label="Tools and Resources">
+          <div class="nav-dropdown__inner">
+            <div class="nav-dropdown__col">
+              <p class="nav-dropdown__label">Start designing</p>
+              <a class="nav-dropdown__link" href="/#figma-libraries">Figma Libraries</a>
+              <a class="nav-dropdown__link" href="/#illustration-library">Illustration library</a>
+              <a class="nav-dropdown__link" href="/#iconography">Iconography</a>
+            </div>
+            <div class="nav-dropdown__col">
+              <p class="nav-dropdown__label">Start building</p>
+              <a class="nav-dropdown__link" href="/#storybook">Storybook</a>
+              <a class="nav-dropdown__link" href="/#documentation">Documentation</a>
+              <a class="nav-dropdown__link" href="/#changelog">Changelog</a>
+            </div>
+            <div class="nav-dropdown__col">
+              <p class="nav-dropdown__label">Resources</p>
+              <a class="nav-dropdown__link" href="/#insights">Insights</a>
+              <a class="nav-dropdown__link" href="/#case-studies">Case studies</a>
+              <a class="nav-dropdown__link" href="/#templates">Templates</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+      <!-- ============ STICKY NAVIGATION (reveals on scroll) ============ -->
+      <div class="sticky-nav" id="sticky-nav" aria-hidden="true">
+        <nav class="sticky-nav__bar" aria-label="Sticky primary">
+          <a class="sticky-nav__brand" href="/" aria-label="MADE home">
+            <svg
+              class="sticky-nav__logo"
+              viewBox="0 0 1312 385.746"
+              role="img"
+              aria-label="made"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M312.025 124.178C327.564 124.178 341.779 126.644 354.67 131.576C367.56 136.332 378.597 143.113 387.779 151.92C396.962 160.551 404.113 171.12 409.234 183.625C414.355 195.955 416.916 209.606 416.916 224.578V377.819C416.916 379.278 415.73 380.461 414.267 380.461H376.125C374.662 380.461 373.476 379.278 373.476 377.819V238.581C373.476 215.331 367.472 197.276 355.464 184.418C343.457 171.56 326.416 165.131 304.343 165.131C293.925 165.131 284.213 166.892 275.207 170.415C266.201 173.762 258.343 178.694 251.633 185.211C244.923 191.728 239.625 199.566 235.74 208.725C232.032 217.885 230.178 228.189 230.178 239.638V377.819C230.178 379.278 228.992 380.461 227.529 380.461H189.387C187.924 380.461 186.738 379.278 186.738 377.819V238.581C186.738 215.331 180.734 197.276 168.726 184.418C156.719 171.56 139.678 165.131 117.605 165.131C107.54 165.131 97.9161 166.804 88.7337 170.151C79.7279 173.497 71.8698 178.429 65.1596 184.946C58.4494 191.287 53.0636 199.126 49.0022 208.461C45.1173 217.62 43.1749 228.013 43.1749 239.638V377.819C43.1749 379.278 41.989 380.461 40.5261 380.461H2.64877C1.18589 380.461 0 379.278 0 377.819V132.105C0 130.645 1.18589 129.463 2.64877 129.463H40.2612C41.7241 129.463 42.91 130.645 42.91 132.105V154.079C42.91 156.64 46.3063 157.783 48.0015 155.86C51.8026 151.547 55.9327 147.768 60.3919 144.522C66.9255 139.591 73.724 135.627 80.7874 132.633C88.0273 129.639 95.4439 127.525 103.037 126.292C110.63 124.883 118.047 124.178 125.287 124.178C146.653 124.178 165.371 128.67 181.44 137.653C196.028 145.648 207.487 156.546 215.817 170.348C216.909 172.156 219.614 172.159 220.705 170.351C225.312 162.722 230.677 156.226 236.8 150.863C244.04 144.346 251.809 139.15 260.109 135.275C268.408 131.224 276.973 128.406 285.802 126.82C294.808 125.059 303.549 124.178 312.025 124.178Z"
+              />
+              <path
+                d="M722.257 250.999C720.157 180.602 662.286 124.178 591.203 124.178C518.79 124.178 460.089 182.732 460.089 254.962C460.089 327.192 518.79 385.746 591.203 385.746C625.426 385.746 656.587 372.666 679.936 351.245V383.103C679.936 384.563 681.122 385.746 682.585 385.746H719.668C721.13 385.746 722.316 384.563 722.316 383.103V250.999H722.257ZM679.936 254.962C679.936 303.845 640.209 343.472 591.203 343.472C542.196 343.472 502.469 303.845 502.469 254.962C502.469 206.079 542.196 166.452 591.203 166.452C640.209 166.452 679.936 206.079 679.936 254.962Z"
+              />
+              <path
+                d="M984.544 2.6421C984.544 1.18291 985.73 0 987.193 0H1024.28C1025.74 0 1026.92 1.18291 1026.92 2.64209V253.641C1026.93 254.081 1026.92 254.521 1026.92 254.962C1026.92 327.192 968.223 385.746 895.811 385.746C823.398 385.746 764.697 327.192 764.697 254.962C764.697 182.732 823.398 124.178 895.811 124.178C930.034 124.178 961.195 137.258 984.544 158.679V2.6421ZM895.811 343.472C944.817 343.472 984.544 303.845 984.544 254.962C984.544 206.079 944.817 166.452 895.811 166.452C846.804 166.452 807.077 206.079 807.077 254.962C807.077 303.845 846.804 343.472 895.811 343.472Z"
+              />
+              <path
+                d="M1193.6 124.178C1210.73 124.178 1226.53 127.349 1241.01 133.69C1255.49 140.031 1267.94 148.926 1278.36 160.375C1288.78 171.824 1296.9 185.563 1302.73 201.592C1308.73 217.444 1311.82 234.97 1312 254.169C1312 256.988 1311.91 259.806 1311.74 262.624L1311.61 264.474C1311.53 265.61 1311.46 266.73 1311.38 267.832C1311.28 269.215 1310.13 270.286 1308.74 270.286H1116.33C1114.74 270.286 1113.51 271.675 1113.74 273.244C1115.44 285.046 1118.58 295.421 1123.14 304.369C1128.26 314.057 1134.62 322.159 1142.21 328.676C1149.81 335.193 1158.46 340.037 1168.17 343.208C1177.88 346.378 1188.13 347.964 1198.9 347.964C1213.73 347.964 1227.68 345.322 1240.75 340.037C1252.96 335.099 1264.17 328.392 1274.37 319.916C1275.54 318.946 1277.29 319.115 1278.22 320.312L1298.07 345.792C1298.91 346.872 1298.78 348.416 1297.77 349.333C1290.55 355.842 1283.11 361.374 1275.45 365.93C1267.15 370.862 1258.67 374.825 1250.02 377.819C1241.37 380.638 1232.54 382.663 1223.53 383.896C1214.53 385.129 1205.43 385.746 1196.25 385.746C1177.53 385.746 1160.31 382.663 1144.6 376.498C1129.06 370.157 1115.64 361.262 1104.34 349.813C1093.04 338.188 1084.21 324.361 1077.85 308.332C1071.67 292.304 1068.58 274.513 1068.58 254.962C1068.58 235.763 1071.67 218.149 1077.85 202.12C1084.21 185.915 1092.95 172.088 1104.07 160.639C1115.2 149.19 1128.35 140.295 1143.54 133.954C1158.9 127.437 1175.59 124.178 1193.6 124.178ZM1192.81 162.489C1181.68 162.489 1171.62 164.338 1162.61 168.037C1153.6 171.56 1145.75 176.58 1139.04 183.097C1132.5 189.438 1127.03 197.1 1122.61 206.083C1118.78 214.058 1116.02 222.826 1114.36 232.389C1114.08 233.978 1115.32 235.41 1116.94 235.41H1264.76C1266.35 235.41 1267.59 234.013 1267.35 232.44C1265.83 222.515 1263.15 213.465 1259.29 205.291C1255.23 196.307 1249.93 188.645 1243.4 182.304C1237.04 175.963 1229.54 171.12 1220.88 167.773C1212.41 164.25 1203.05 162.489 1192.81 162.489Z"
+              />
+            </svg>
+          </a>
+
+          <ul class="sticky-nav__list">
+            <li><a class="sticky-nav__link is-active" href="/about.html" aria-current="page">About</a></li>
+            <li><a class="sticky-nav__link" href="/#design-systems">Design systems</a></li>
+            <li><a class="sticky-nav__link" href="/#made-ai">MADE AI</a></li>
+            <li>
+              <button
+                type="button"
+                class="sticky-nav__link sticky-nav__link--has-icon"
+                id="sticky-tools-trigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="sticky-tools-dropdown"
+              >
+                Resources
+                <made-icon
+                  class="sticky-nav__chevron"
+                  name="chevrons/outline/12px/chevron-down-outline-12px"
+                ></made-icon>
+              </button>
+            </li>
+          </ul>
+
+          <div class="sticky-nav__controls">
+            <button
+              type="button"
+              class="sticky-nav__toggle"
+              id="sticky-theme-toggle"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+            >
+              <made-icon
+                class="sticky-nav__toggle-icon"
+                name="toggle/outline/sun-outline"
+              ></made-icon>
+            </button>
+          </div>
+
+          <!-- Floating Resources menu -->
+          <div
+            class="sticky-nav__menu"
+            id="sticky-tools-dropdown"
+            role="region"
+            aria-label="Tools and Resources"
+          >
+            <div class="sticky-nav__menu-inner">
+              <div class="nav-dropdown__col">
+                <p class="nav-dropdown__label">Start designing</p>
+                <a class="nav-dropdown__link" href="/#figma-libraries">Figma Libraries</a>
+                <a class="nav-dropdown__link" href="/#illustration-library">Illustration library</a>
+                <a class="nav-dropdown__link" href="/#iconography">Iconography</a>
+              </div>
+              <div class="nav-dropdown__col">
+                <p class="nav-dropdown__label">Start building</p>
+                <a class="nav-dropdown__link" href="/#storybook">Storybook</a>
+                <a class="nav-dropdown__link" href="/#documentation">Documentation</a>
+                <a class="nav-dropdown__link" href="/#changelog">Changelog</a>
+              </div>
+              <div class="nav-dropdown__col">
+                <p class="nav-dropdown__label">Resources</p>
+                <a class="nav-dropdown__link" href="/#insights">Insights</a>
+                <a class="nav-dropdown__link" href="/#case-studies">Case studies</a>
+                <a class="nav-dropdown__link" href="/#templates">Templates</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <main class="page about">
+        <!-- ============ HERO ============ -->
+        <section class="about-hero" data-nav-section aria-labelledby="about-hero-heading">
+          <h1 id="about-hero-heading" class="about-hero__title" data-blur-words>
+            How Mastercard scales<br />quality experiences.
+          </h1>
+          <div class="about-hero__banner">
+            <img
+              class="about-hero__image"
+              src="/assets/images/about-hero.jpg"
+              alt="The Mastercard priceless experiences app shown on a phone against a rolling green landscape"
+              width="1392"
+              height="760"
+            />
+          </div>
+        </section>
+
+        <!-- ============ NARRATIVE ============ -->
+        <section class="about-intro" data-nav-section aria-label="Our point of view">
+          <div class="about-intro__pin" data-scroll-read>
+            <div class="about-intro__copy">
+            <h2 class="about-intro__heading" data-blur-words>Copilot, not autopilot.</h2>
+            <p>
+              We are entering a new era of product creation. AI is changing how we design, build,
+              and deliver digital experiences. The pace is accelerating. Expectations are rising.
+              The opportunity is immense. But while the tools are changing, our standards are not.
+            </p>
+            <p>
+              We believe every product should be thoughtfully designed, expertly crafted, accessible
+              to all, and built to the highest quality.
+            </p>
+            <p>
+              AI helps us work faster. It helps us automate, generate, analyze, and scale. It does
+              not replace judgment. It does not replace creativity. It does not replace craft.
+            </p>
+            <p>
+              The experiences we create still require vision, empathy, expertise, and accountability.
+              That is why MADE combines design systems, accessibility, engineering foundations, and
+              AI-powered workflows into a single ecosystem designed for the future of product
+              development.
+            </p>
+            <p>
+              A future where teams spend less time recreating the same solutions and more time
+              solving meaningful problems.
+            </p>
+            <p>A future where quality scales alongside speed.</p>
+            <p>
+              A future where innovation never comes at the expense of trust, consistency, or
+              inclusion.
+            </p>
+            <p>We are not choosing between craft and AI.</p>
+            <p class="about-intro__emphasis">
+              We are building a future where both make each other stronger.
+            </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ CONTROL LAYER (dark) ============ -->
+        <section class="about-control" data-nav-section data-nav-dark aria-labelledby="control-heading">
+          <div class="about-control__top" data-blur-group>
+            <div class="about-control__statement">
+              <h2 id="control-heading" class="about-control__title" data-blur-item>
+                MADE. Mastercard's control layer for product development.
+              </h2>
+              <p class="about-control__lede" data-blur-item>
+                As organisations scale, complexity compounds. More teams, more tools, more
+                AI-generated output. Without alignment, this leads to inconsistency, rework and risk.
+                MADE fixes that upfront. It standardises experience decisions, aligns design and
+                engineering, and embeds Mastercard standards into every output. So teams move faster.
+              </p>
+            </div>
+            <div class="about-control__venn" data-blur-item aria-hidden="true">
+              <svg viewBox="0 0 560 320" role="presentation" xmlns="http://www.w3.org/2000/svg">
+                <circle class="venn-ring" cx="195" cy="170" r="116" />
+                <circle class="venn-ring" cx="280" cy="160" r="116" />
+                <circle class="venn-ring" cx="365" cy="150" r="116" />
+                <circle class="venn-dot" cx="232" cy="252" r="8" />
+                <circle class="venn-dot" cx="330" cy="64" r="8" />
+                <circle class="venn-dot" cx="496" cy="150" r="8" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="about-control__features">
+            <article class="ctrl-feature" data-blur-group>
+              <div class="ctrl-feature__head" data-blur-item>
+                <made-icon class="ctrl-feature__icon" name="user/outline/user-group-outline"></made-icon>
+                <h3 class="ctrl-feature__title">Built for Mastercard</h3>
+              </div>
+              <p class="ctrl-feature__body" data-blur-item>
+                MADE is not a tool. It's infrastructure. It works across design, engineering, product
+                and AI workflows without forcing teams to change their tools or process. It's a shared
+                dependency. Always on. Always consistent.
+              </p>
+            </article>
+            <article class="ctrl-feature" data-blur-group>
+              <div class="ctrl-feature__head" data-blur-item>
+                <made-icon class="ctrl-feature__icon" name="arrows/outline/arrow-path-outline"></made-icon>
+                <h3 class="ctrl-feature__title">Across the lifecycle</h3>
+              </div>
+              <p class="ctrl-feature__body" data-blur-item>
+                MADE supports the full product lifecycle: Design → guided by patterns and standards.
+                Build → powered by components and tokens. Run → governed, validated and consistent.
+                This continuity removes fragmentation and keeps teams moving.
+              </p>
+            </article>
+            <article class="ctrl-feature" data-blur-group>
+              <div class="ctrl-feature__head" data-blur-item>
+                <made-icon class="ctrl-feature__icon" name="status/outline/shield-check-outline"></made-icon>
+                <h3 class="ctrl-feature__title">Quality built in</h3>
+              </div>
+              <p class="ctrl-feature__body" data-blur-item>
+                With MADE, quality is not a step. It's the default. Every experience inherits
+                Mastercard standards for accessibility, brand and compliance. No retrofitting. No
+                rework. Just predictable, production-ready outcomes.
+              </p>
+            </article>
+            <article class="ctrl-feature" data-blur-group>
+              <div class="ctrl-feature__head" data-blur-item>
+                <made-icon class="ctrl-feature__icon" name="data/outline/chart-vertical-bar-axis-03-outline"></made-icon>
+                <h3 class="ctrl-feature__title">Real impact</h3>
+              </div>
+              <p class="ctrl-feature__body" data-blur-item>
+                MADE delivers real, compounding value: faster delivery through reusable standards,
+                reduced rework through upfront alignment, lower risk with built-in compliance, and a
+                consistent brand across every product. At scale, these gains become operating leverage.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============ DRIVING IMPACT ============ -->
+        <section class="about-impact" data-nav-section aria-label="Driving impact">
+          <div class="about-impact__grid">
+            <article class="impact-card" data-blur-group>
+              <p class="impact-card__cat" data-blur-item>CNPF</p>
+              <div class="impact-card__body" data-blur-item>
+                <p class="impact-card__stat">
+                  <span class="impact-card__stat-muted">SME's design system Comet</span>
+                  accelerated development by 6 months
+                </p>
+                <a class="impact-card__link" href="#cnpf">Read story</a>
+              </div>
+            </article>
+            <article class="impact-card" data-blur-group>
+              <p class="impact-card__cat" data-blur-item>MC Connect</p>
+              <div class="impact-card__body" data-blur-item>
+                <p class="impact-card__stat">
+                  <span class="impact-card__stat-muted">SME's design system Comet</span>
+                  accelerated development by 6 months
+                </p>
+                <a class="impact-card__link" href="#mc-connect">Read story</a>
+              </div>
+            </article>
+            <article class="impact-card" data-blur-group>
+              <p class="impact-card__cat" data-blur-item>Foundry</p>
+              <div class="impact-card__body" data-blur-item>
+                <p class="impact-card__stat">
+                  <span class="impact-card__stat-muted">SME's design system Comet</span>
+                  accelerated development by 6 months
+                </p>
+                <a class="impact-card__link" href="#foundry">Read story</a>
+              </div>
+            </article>
+            <article class="impact-card" data-blur-group>
+              <p class="impact-card__cat" data-blur-item>TECH</p>
+              <div class="impact-card__body" data-blur-item>
+                <p class="impact-card__stat">
+                  <span class="impact-card__stat-muted">SME's design system Comet</span>
+                  accelerated development by 6 months
+                </p>
+                <a class="impact-card__link" href="#tech">Read story</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="faq" data-nav-section aria-labelledby="faq-heading">
+          <div class="faq__intro">
+            <h2 id="faq-heading" class="faq__title" data-blur-words>
+              Still can't find the answer to your question? Join our teams channel and chat with the
+              team.
+            </h2>
+            <made-button variant="primary" href="#join">Join our team</made-button>
+          </div>
+          <div class="faq__list">
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <span class="faq-item__icon" aria-hidden="true">
+                  <made-icon class="faq-item__icon--plus" name="navigation/outline/plus-outline"></made-icon>
+                  <made-icon class="faq-item__icon--minus" name="navigation/outline/minus-outline"></made-icon>
+                </span>
+                <span class="faq-item__q">What is MADE?</span>
+              </summary>
+              <p class="faq-item__a">
+                MADE is Mastercard's Adaptive Design Ecosystem — a control layer for product
+                development that unifies design systems, accessibility, engineering foundations and
+                AI-powered workflows so every experience ships consistent, compliant and
+                production-ready.
+              </p>
+            </details>
+            <details class="faq-item" open>
+              <summary class="faq-item__summary">
+                <span class="faq-item__icon" aria-hidden="true">
+                  <made-icon class="faq-item__icon--plus" name="navigation/outline/plus-outline"></made-icon>
+                  <made-icon class="faq-item__icon--minus" name="navigation/outline/minus-outline"></made-icon>
+                </span>
+                <span class="faq-item__q">Is MADE just a design system?</span>
+              </summary>
+              <p class="faq-item__a">
+                No. While the design system is a core part of MADE, the ecosystem extends beyond
+                components and design guidance. MADE also includes accessibility capabilities,
+                engineering assets, AI-powered tools, workflow integration, governance, and product
+                development standards.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <span class="faq-item__icon" aria-hidden="true">
+                  <made-icon class="faq-item__icon--plus" name="navigation/outline/plus-outline"></made-icon>
+                  <made-icon class="faq-item__icon--minus" name="navigation/outline/minus-outline"></made-icon>
+                </span>
+                <span class="faq-item__q">Why should my team use MADE?</span>
+              </summary>
+              <p class="faq-item__a">
+                Teams using MADE inherit Mastercard standards automatically — accessibility, brand
+                consistency and compliance are embedded from the start, reducing risk and rework
+                while accelerating delivery.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <span class="faq-item__icon" aria-hidden="true">
+                  <made-icon class="faq-item__icon--plus" name="navigation/outline/plus-outline"></made-icon>
+                  <made-icon class="faq-item__icon--minus" name="navigation/outline/minus-outline"></made-icon>
+                </span>
+                <span class="faq-item__q">How does MADE support AI-driven product development?</span>
+              </summary>
+              <p class="faq-item__a">
+                MADE ships machine-readable documentation, agents and skills so AI tools can generate
+                experiences that are consistent, compliant and production-ready by default.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <span class="faq-item__icon" aria-hidden="true">
+                  <made-icon class="faq-item__icon--plus" name="navigation/outline/plus-outline"></made-icon>
+                  <made-icon class="faq-item__icon--minus" name="navigation/outline/minus-outline"></made-icon>
+                </span>
+                <span class="faq-item__q">Does AI replace designers and developers?</span>
+              </summary>
+              <p class="faq-item__a">
+                No. MADE's AI tooling augments teams — handling repetitive work and guardrails so
+                designers and developers can focus on higher-value problem solving.
+              </p>
+            </details>
+          </div>
+        </section>
+      </main>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="site-footer">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <img
+              class="brand__logo"
+              src="/assets/images/mastercard.svg"
+              alt="Mastercard"
+              width="40"
+              height="24"
+            />
+            <p class="site-footer__tagline">
+              mastercards global design system<br />infrastructure and ai tooling
+            </p>
+          </div>
+          <nav class="site-footer__cols" aria-label="Footer">
+            <div class="footer-col">
+              <h3 class="footer-col__title">Design systems</h3>
+              <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Content Design</a></li>
+                <li><a href="#">Code &amp; Storybook</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-col__title">MADE AI</h3>
+              <ul>
+                <li><a href="#">Model Context Protocol</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Agents</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-col__title">About</h3>
+              <ul>
+                <li><a href="/about.html">About MADE</a></li>
+                <li><a href="#">Roadmap</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <p class="site-footer__copy">© Mastercard</p>
+          </nav>
+        </div>
+        <div class="site-footer__wordmark" aria-hidden="true">
+          <svg
+            class="footer-wordmark__svg"
+            viewBox="0 0 1312 385.746"
+            role="img"
+            aria-label="made"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g class="wm-letter" style="--i: 0">
+              <path
+                d="M312.025 124.178C327.564 124.178 341.779 126.644 354.67 131.576C367.56 136.332 378.597 143.113 387.779 151.92C396.962 160.551 404.113 171.12 409.234 183.625C414.355 195.955 416.916 209.606 416.916 224.578V377.819C416.916 379.278 415.73 380.461 414.267 380.461H376.125C374.662 380.461 373.476 379.278 373.476 377.819V238.581C373.476 215.331 367.472 197.276 355.464 184.418C343.457 171.56 326.416 165.131 304.343 165.131C293.925 165.131 284.213 166.892 275.207 170.415C266.201 173.762 258.343 178.694 251.633 185.211C244.923 191.728 239.625 199.566 235.74 208.725C232.032 217.885 230.178 228.189 230.178 239.638V377.819C230.178 379.278 228.992 380.461 227.529 380.461H189.387C187.924 380.461 186.738 379.278 186.738 377.819V238.581C186.738 215.331 180.734 197.276 168.726 184.418C156.719 171.56 139.678 165.131 117.605 165.131C107.54 165.131 97.9161 166.804 88.7337 170.151C79.7279 173.497 71.8698 178.429 65.1596 184.946C58.4494 191.287 53.0636 199.126 49.0022 208.461C45.1173 217.62 43.1749 228.013 43.1749 239.638V377.819C43.1749 379.278 41.989 380.461 40.5261 380.461H2.64877C1.18589 380.461 0 379.278 0 377.819V132.105C0 130.645 1.18589 129.463 2.64877 129.463H40.2612C41.7241 129.463 42.91 130.645 42.91 132.105V154.079C42.91 156.64 46.3063 157.783 48.0015 155.86C51.8026 151.547 55.9327 147.768 60.3919 144.522C66.9255 139.591 73.724 135.627 80.7874 132.633C88.0273 129.639 95.4439 127.525 103.037 126.292C110.63 124.883 118.047 124.178 125.287 124.178C146.653 124.178 165.371 128.67 181.44 137.653C196.028 145.648 207.487 156.546 215.817 170.348C216.909 172.156 219.614 172.159 220.705 170.351C225.312 162.722 230.677 156.226 236.8 150.863C244.04 144.346 251.809 139.15 260.109 135.275C268.408 131.224 276.973 128.406 285.802 126.82C294.808 125.059 303.549 124.178 312.025 124.178Z"
+              />
+            </g>
+            <g class="wm-letter" style="--i: 1">
+              <path
+                d="M722.257 250.999C720.157 180.602 662.286 124.178 591.203 124.178C518.79 124.178 460.089 182.732 460.089 254.962C460.089 327.192 518.79 385.746 591.203 385.746C625.426 385.746 656.587 372.666 679.936 351.245V383.103C679.936 384.563 681.122 385.746 682.585 385.746H719.668C721.13 385.746 722.316 384.563 722.316 383.103V250.999H722.257ZM679.936 254.962C679.936 303.845 640.209 343.472 591.203 343.472C542.196 343.472 502.469 303.845 502.469 254.962C502.469 206.079 542.196 166.452 591.203 166.452C640.209 166.452 679.936 206.079 679.936 254.962Z"
+              />
+            </g>
+            <g class="wm-letter" style="--i: 2">
+              <path
+                d="M984.544 2.6421C984.544 1.18291 985.73 0 987.193 0H1024.28C1025.74 0 1026.92 1.18291 1026.92 2.64209V253.641C1026.93 254.081 1026.92 254.521 1026.92 254.962C1026.92 327.192 968.223 385.746 895.811 385.746C823.398 385.746 764.697 327.192 764.697 254.962C764.697 182.732 823.398 124.178 895.811 124.178C930.034 124.178 961.195 137.258 984.544 158.679V2.6421ZM895.811 343.472C944.817 343.472 984.544 303.845 984.544 254.962C984.544 206.079 944.817 166.452 895.811 166.452C846.804 166.452 807.077 206.079 807.077 254.962C807.077 303.845 846.804 343.472 895.811 343.472Z"
+              />
+            </g>
+            <g class="wm-letter" style="--i: 3">
+              <path
+                d="M1193.6 124.178C1210.73 124.178 1226.53 127.349 1241.01 133.69C1255.49 140.031 1267.94 148.926 1278.36 160.375C1288.78 171.824 1296.9 185.563 1302.73 201.592C1308.73 217.444 1311.82 234.97 1312 254.169C1312 256.988 1311.91 259.806 1311.74 262.624L1311.61 264.474C1311.53 265.61 1311.46 266.73 1311.38 267.832C1311.28 269.215 1310.13 270.286 1308.74 270.286H1116.33C1114.74 270.286 1113.51 271.675 1113.74 273.244C1115.44 285.046 1118.58 295.421 1123.14 304.369C1128.26 314.057 1134.62 322.159 1142.21 328.676C1149.81 335.193 1158.46 340.037 1168.17 343.208C1177.88 346.378 1188.13 347.964 1198.9 347.964C1213.73 347.964 1227.68 345.322 1240.75 340.037C1252.96 335.099 1264.17 328.392 1274.37 319.916C1275.54 318.946 1277.29 319.115 1278.22 320.312L1298.07 345.792C1298.91 346.872 1298.78 348.416 1297.77 349.333C1290.55 355.842 1283.11 361.374 1275.45 365.93C1267.15 370.862 1258.67 374.825 1250.02 377.819C1241.37 380.638 1232.54 382.663 1223.53 383.896C1214.53 385.129 1205.43 385.746 1196.25 385.746C1177.53 385.746 1160.31 382.663 1144.6 376.498C1129.06 370.157 1115.64 361.262 1104.34 349.813C1093.04 338.188 1084.21 324.361 1077.85 308.332C1071.67 292.304 1068.58 274.513 1068.58 254.962C1068.58 235.763 1071.67 218.149 1077.85 202.12C1084.21 185.915 1092.95 172.088 1104.07 160.639C1115.2 149.19 1128.35 140.295 1143.54 133.954C1158.9 127.437 1175.59 124.178 1193.6 124.178ZM1192.81 162.489C1181.68 162.489 1171.62 164.338 1162.61 168.037C1153.6 171.56 1145.75 176.58 1139.04 183.097C1132.5 189.438 1127.03 197.1 1122.61 206.083C1118.78 214.058 1116.02 222.826 1114.36 232.389C1114.08 233.978 1115.32 235.41 1116.94 235.41H1264.76C1266.35 235.41 1267.59 234.013 1267.35 232.44C1265.83 222.515 1263.15 213.465 1259.29 205.291C1255.23 196.307 1249.93 188.645 1243.4 182.304C1237.04 175.963 1229.54 171.12 1220.88 167.773C1212.41 164.25 1203.05 162.489 1192.81 162.489Z"
+              />
+            </g>
+          </svg>
+        </div>
+      </footer>
+    </made-theme-provider>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

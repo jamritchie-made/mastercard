@@ -1,0 +1,21 @@
+{
+  "name": "made-website-2026",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mc-made/css": "4.0.0",
+    "@mc-made/design-tokens": "^3.0.0",
+    "@mc-made/fonts": "3.0.0",
+    "@mc-made/icons": "^2.1.1",
+    "@mc-made/web-components": "0.2.0-rc.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

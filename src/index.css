@@ -1,0 +1,30 @@
+/* MADE Design System - Core Imports */
+@import "@mc-made/css/made.css";
+@import "@mc-made/fonts/mark-for-mc.css";
+/* Dark first, light last so :root defaults to light. Mode is switched by setting
+   data-color-mode on <body>, which the [data-color-mode="..."] scoped selectors target. */
+@import "@mc-made/design-tokens/themes/mastercard/dark.css";
+@import "@mc-made/design-tokens/themes/mastercard/light.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--made-font-family-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--made-color-background-default);
+  color: var(--made-color-text-primary);
+}
+
+code {
+  font-family: var(--made-font-family-monospace);
+}
