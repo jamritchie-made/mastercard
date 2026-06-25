@@ -3,3 +3,11 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
+{
+  // ...
+  "routes": [
+    // ...
+    { "handle": "filesystem" }
+  ]
+} 
