@@ -1,5 +1,15 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index" }
-  ]
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/403",
+      "destination": "/403.html"
+    },
+   
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
